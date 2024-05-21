@@ -1,24 +1,27 @@
+/* variavel para as cores  */ 
 :root{
-
-   --fundo-menu-lateral: #161A26;
+    
+   --fundo-menu-lateral: #00131f;
    --fundo-claro: #c8d4db;
-   --fundo-claro2: #98999c;
+   --fundo-claro2: #2f3538;
 
-   --borda-clara: #989DA6;
-   --borda-escura: #98999c;
+   --borda-clara: #38E0F2;
+   --borda-escura: #037F8C;
 
-
-   --texto-escuro: #161616;
-   --texto-claro: #c8d4db;
+   --texto-escuro: #000000;
+   --texto-claro: #ffffff;
    --texto-hover: #218591;
+   --texto-opaco: #818181;
 
-   --texto-titulo-claro: #38e0f2;
-   --texto-titulo-escuro: #037f8c;
+   --cor-detalhes: #149ddd;
+
+   --texto-titulo-claro: #38E0F2;
+   --texto-titulo-escuro: #037F8C;
 
    --sombra-clara: rgba(255, 255, 255, 1);
-   --sobra-escura: rgba(31, 31, 31, 0.1);
+   --sombra-escura: rgba(31, 31, 31, 0.1);
 }
-/* css geral */
+/* css geral  */
 body {
    font-family: Arial, Helvetica, sans-serif;
    /* color: #161616; */
@@ -27,6 +30,10 @@ body {
 }
 a{
    color: var(--texto-escuro);
+   text-decoration: none;
+}
+a:hover {
+   color: var(--texto-hover);
    text-decoration: none; /* retirar underline */
 }
 h1, h2, h3, h4, h5, h6 {
@@ -40,17 +47,17 @@ h1, h2, h3, h4, h5, h6 {
    bottom: 0;
    width: 320px;
    transition: all ease-in-out 0.5s;
-   z-index: 99;
+   z-index: 99; /**/
    padding: 0 15px;
    background: var(--fundo-menu-lateral);
-   overflow: auto; /* transbordar */
+   overflow-y: auto; /*transbordar*/ 
 }
 #header .perfil img {
-   margin: 15px;
+   margin: 15px auto;
    display: block;
    width: 120px;
    border: 2px solid var(--borda-clara);
-   box-shadow: 0px 0px 10px 0px var(--sombra-clara);
+   box-shadow: 0px 0px 10px 0px var(--sombra-clara); /* sombra */
 }
 #header .perfil h1 {
    font-size: 24px;
@@ -58,12 +65,12 @@ h1, h2, h3, h4, h5, h6 {
    padding: 0;
    font-weight: 600;
    text-align: center;
-   /* font-family */
+   /* font-family: ; */
 }
-/* caso queira colocar link no h1 */
-#header .perfil h1 a,
+/* Caso coloquem Link no H1 */
+#header .perfil h1 a, 
 #header .perfil h1 a:hover {
-   /* color: ; 
+   /* color: ;
    text-decoration: none; */
 }
 .perfil .social-links i {
@@ -79,7 +86,7 @@ h1, h2, h3, h4, h5, h6 {
    width: 35px;
    height: 35px;
    transition: 0.3s;
-   box-shadow: 0px 0px 5px 0px var(--sombra-clara); /* sombra do icone */
+   box-shadow: 0px 0px 5px 0px var(--sombra-clara); /* sombra */
 }
 .perfil .social-links a:hover,
 .social-links i:hover {
@@ -91,5 +98,83 @@ h1, h2, h3, h4, h5, h6 {
    border-radius: 50%;
    width: 35px;
    height: 35px;
+   box-shadow: 0px 0px 5px 0px var(--sombra-clara); /* sombra */
+}
+
+.perfil .social-links a:hover,
+.social-links i:hover {
+   font-size: 18px;
+   display: inline-block;
+   background: white;
+   color: black;
+   margin-right: 5px;
+   border-radius: 50%;
+   width: 35px;
+   height: 35px;
    box-shadow: 0px 0px 5px 0px var(--sombra-clara); /* sombra do icone */
+}
+
+/* ajuste para o corpo principal */
+#main {
+   margin-left: 300px;
+}
+.container,
+.container-fluid {
+   padding-left: 30px;
+   padding-right: 30px;
+}
+@media (max-width: 1199px) {
+   #header {
+      left: -300px;
+   }
+   #main {
+      margin-left: 0;
+   }
+   .container,
+   .container-fluid {
+      padding-left: 12px;
+   padding-right: 12px;
+   } 
+}
+/* Menu Desktop */
+.nav-menu {
+   padding: 30px 0 0 0;
+}
+.nav-menu * {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+}
+.nav-menu>ul>li {
+   position: relative;
+   white-space: nowrap;
+}
+/* revisão */
+.nav-menu a,
+.nav-menu:focus {
+   display: flex;
+   align-items: center;
+   color: var(--texto-opaco);
+   padding: 12px 15px;
+   margin-bottom: 8px;
+   transition: 0.3s;
+   font-size: 15px;
+}
+.nav-menu a i,
+.nav-menu a:focus i {
+   font-size: 22px;
+   padding-right: 10px;
+}
+.nav-menu a:hover,
+.nav-menu .active,
+.nav-menu .active:focus, 
+.nav-menu li:hover>a {
+   text-decoration: none;
+   color: var(--texto-claro);
+}
+.nav-menu a:hover i,
+.nav-menu .active i,
+.nav-menu .active:focus i,
+.nav-menu li:hover>a i {
+   color: var(--cor-detalhes);
 }
