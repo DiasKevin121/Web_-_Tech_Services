@@ -2,8 +2,8 @@
 :root{
     
    --fundo-menu-lateral: #00131f;
-   --fundo-claro: #c8d4db;
-   --fundo-escuro: #7f878b;
+   --fundo-claro: #a6afb4;
+   --fundo-escuro: #2f3538;
 
    --borda-clara: #38E0F2;
    --borda-escura: #012c31;
@@ -292,7 +292,7 @@ h1, h2, h3, h4, h5, h6 {
 section {
    padding: 60px 0;
    overflow: hidden;
-   background: var(--fundo-escuro);
+   background: var(--fundo-claro);
 }
 .section-bg {
    background: var(--fundo-escuro);
@@ -377,5 +377,34 @@ section {
 }
 .conquistas .count-box i:hover {
    color: var(--borda-escura);
+   transition: 0.4s;
+}
+/* Skills // Habilidades // Vendas */
+.skills .progress {
+   height: 60px;
+   display: block;
+   background: none;
+   border-radius: 0;
+}
+.skills .progress .skill {
+   padding: 0;
+   margin: 0px 0px 5px 0;
+   text-transform: uppercase;
+   display: block;
+   font-weight: 600;
+}
+.skills .progress .skill .val {
+   float: right;
+   font-style: normal;
+}
+.skills .progress-bar-bg {
+   background: var(--fundo-claro);
+   height: 10px;
+}
+.skills .progress-bar {
+   width: 1px;
+   height: 10px;
+   transition: 3s;
+   background: var(--cor-detalhes)
 }
 
