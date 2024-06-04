@@ -1,22 +1,22 @@
 /* variavel para as cores  */ 
 :root{
     
-   --fundo-menu-lateral: #00131f;
+   --fundo-menu-lateral: #0b1c25;
    --fundo-claro: #a6afb4;
    --fundo-escuro: #2f3538;
 
    --borda-clara: #38E0F2;
-   --borda-escura: #012c31;
+   --borda-escura: #037F8C;
 
-   --texto-escuro: #000000;
-   --texto-claro: #ffffff;
-   --texto-branco: #ffffff;
+   --texto-escuro: #161616;
+   --texto-claro: #c8d4db;
+   --texto-branco: #ecf8ff;
    --texto-hover: #218591;
-   --texto-opaco: #818181;
+   --texto-opaco: #81888c;
 
    --cor-detalhes: #149ddd;
 
-   --texto-titulo-claro: #0f909e;
+   --texto-titulo-claro: #38E0F2;
    --texto-titulo-escuro: #037F8C;
 
    --sombra-clara: rgba(255, 255, 255, 1);
@@ -26,7 +26,7 @@
 body {
    font-family: Arial, Helvetica, sans-serif;
    /* color: #161616; */
-   color: var(--texto-claro);
+   color: var(--texto-escuro);
    background: var(--fundo-escuro);
 }
 a{
@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
    font-family: 'Times New Roman', Times, serif;
 }
 
-/* Botão back-to-top */
+/* Botão back to top = Scroll */
 .back-to-top {
    position: fixed;
    visibility: hidden;
@@ -55,22 +55,20 @@ h1, h2, h3, h4, h5, h6 {
    background: var(--cor-detalhes);
    transition: all 0.4s;
 }
-
 .back-to-top i {
    font-size: 28px;
    color: var(--texto-branco);
    line-height: 0;
+
 }
 .back-to-top:hover {
    background: var(--borda-escura);
    color: var(--texto-claro);
 }
-
 .back-to-top.active {
    visibility: visible;
    opacity: 1;
 }
-
 /* cabeçalho */
 #header {
    position: fixed;
@@ -89,7 +87,7 @@ h1, h2, h3, h4, h5, h6 {
    display: block;
    width: 120px;
    border: 2px solid var(--borda-clara);
-   box-shadow: 0px 0px 5px 0px var(--sombra-clara); /* sombra */
+   box-shadow: 0px 0px 10px 0px var(--sombra-clara); /* sombra */
 }
 #header .perfil h1 {
    font-size: 24px;
@@ -101,9 +99,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* Caso coloquem Link no H1 
 #header .perfil h1 a, 
-#header .perfil h1 a:hover  color: ;
-   text-decoration: none; 
-}*/
+#header .perfil h1 a:hover {
+   /* color: ;
+   text-decoration: none;
+} */
 .perfil .social-links i {
    font-size: 18px;
    display: inline-block;
@@ -131,20 +130,6 @@ h1, h2, h3, h4, h5, h6 {
    height: 35px;
    box-shadow: 0px 0px 5px 0px var(--sombra-clara); /* sombra */
 }
-
-.perfil .social-links a:hover,
-.social-links i:hover {
-   font-size: 18px;
-   display: inline-block;
-   background: white;
-   color: black;
-   margin-right: 5px;
-   border-radius: 50%;
-   width: 35px;
-   height: 35px;
-   box-shadow: 0px 0px 5px 0px var(--sombra-clara); /* sombra do icone */
-}
-
 /* ajuste para o corpo principal */
 #main {
    margin-left: 300px;
@@ -156,31 +141,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 1199px) {
    #header {
-      left: -300px;
+       left: -300px;
    }
    #main {
-      margin-left: 0;
+       margin-left: 0;
    }
    .container,
    .container-fluid {
-      padding-left: 12px;
-   padding-right: 12px;
-   } 
+       padding-left: 12px;
+       padding-right: 12px;
+   }
 }
-/* Menu Desktop */
+/** Menu Desktop **/
 .nav-menu {
    padding: 30px 0 0 0;
 }
-.nav-menu * {
+.nav-menu * { 
    padding: 0;
    margin: 0;
    list-style: none;
 }
 .nav-menu>ul>li {
-   position: relative;
+   /* position: relative; */
    white-space: nowrap;
 }
-/* revisão */
+/*revisão*/
 .nav-menu a,
 .nav-menu:focus {
    display: flex;
@@ -198,7 +183,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .nav-menu a:hover,
 .nav-menu .active,
-.nav-menu .active:focus, 
+.nav-menu .active:focus,
 .nav-menu li:hover>a {
    text-decoration: none;
    color: var(--texto-claro);
@@ -209,7 +194,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu li:hover>a i {
    color: var(--cor-detalhes);
 }
-/* menu mobile */
+/* Menu mobile */
 .mobile-nav-toggle {
    position: fixed;
    top: 15px;
@@ -234,15 +219,17 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-nav-active #header {
    left: 0;
 }
+
+/* hero */
 #hero {
    width: 100%;
    height: 100vh;
-   background: url(../img/fundo.jfif) top center;
+   background: url("../img/fundo.jfif") bottom;
    background-size: cover;
 }
 #hero::before {
    content: "";
-   background: rgba(5, 13, 24, 0.493);
+   background: rgba(5, 13, 24, 0.555);
    position: absolute;
    top: 0;
    right: 0;
@@ -251,19 +238,21 @@ h1, h2, h3, h4, h5, h6 {
    z-index: 1;
 }
 #hero .hero-container {
-   position: relative;
+   /* position: relative; */
    z-index: 2;
-   min-height: 300px;
+   min-width: 300px;
 }
 #hero h1 {
    margin: 0 0 10px 0;
-   font-size: 80px;
-   font-weight: 700;
-   line-height: 60px;
+   font-size: 100px;
+   font-weight: 400;
+   line-height: 100px;
    color: var(--texto-branco);
 }
 #hero p {
-   font-size: 30px;
+   font-size: 40px;
+   color: var(--texto-branco);
+   background: rgba(31, 31, 31, 0.5);
 }
 #hero p span {
    color: var(--texto-branco);
@@ -271,34 +260,31 @@ h1, h2, h3, h4, h5, h6 {
    letter-spacing: 1px;
    border-bottom: 3px solid var(--cor-detalhes);
 }
-
 @media (max-width: 1024px) {
    #hero {
-      background-attachment: fixed;
+       background-attachment: fixed;
    }
 }
 @media (max-width: 768px) {
    #hero h1 {
-      font-size: 50px;
-      line-height: 45px;
-      align-content: center;
-      justify-content: center;
+       font-size: 75px;
+       line-height: 55px;
    }
    #hero p {
-      font-size: 25px;
+       font-size: 25px;
    }
 }
-/* Seções Gerais: tag section*/
+/** Seções Gerais === tag Section ***/
 section {
    padding: 60px 0;
    overflow: hidden;
-   background: var(--fundo-claro);
+   background: var(--fundo-claro)
 }
 .section-bg {
    background: var(--fundo-escuro);
    color: var(--texto-claro);
 }
-.section-title {
+.section-title{
    padding-bottom: 30px;
 }
 .section-title h2 {
@@ -306,17 +292,17 @@ section {
    font-weight: bold;
    margin-bottom: 20px;
    padding-bottom: 20px;
-   color: var(--texto-titulo-claro);
+   color: var(--texto-titulo-escuro);
    position: relative;
-} 
+}
 .section-title h2::after {
    content: "";
    position: absolute;
    display: block;
-   height: 3px;
    width: 50px;
+   height: 3px;
    background: var(--cor-detalhes);
-   bottom: 0; 
+   bottom: 0;
    left: 0;
 }
 .section-title p {
@@ -326,14 +312,14 @@ section {
 .sobre .content h3 {
    font-weight: 700;
    font-size: 26px;
-   color: var();
+   color: var(--cor-detalhes); 
 }
 .sobre .content ul {
    list-style: none;
    padding: 0;
 }
 .sobre .content ul li {
-   margin-bottom: 20;
+   margin-bottom: 20px;
    display: flex;
    align-items: center;
 }
@@ -344,13 +330,13 @@ section {
    font-size: 20px;
    color: var(--cor-detalhes);
    margin-right: 10px;
-   line-height: 0; 
+   line-height: 0;
 }
 /* Conquistas */
 .conquistas {
    padding-bottom: 30px;
 }
-.conquistas .count-box {
+.conquistas .count-box{
    padding: 30px;
    width: 100%;
 }
@@ -375,11 +361,12 @@ section {
    font-family: "Open", sans-serif;
    color: var(--texto-escuro);
 }
+/* Opcional */
 .conquistas .count-box i:hover {
-   color: var(--borda-escura);
+   color: var(--texto-branco);
    transition: 0.4s;
 }
-/* Skills // Habilidades // Vendas */
+/*  Skills // Habilidades // Vendas  */
 .skills .progress {
    height: 60px;
    display: block;
@@ -388,7 +375,7 @@ section {
 }
 .skills .progress .skill {
    padding: 0;
-   margin: 0px 0px 5px 0;
+   margin: 0 0 5px 0;
    text-transform: uppercase;
    display: block;
    font-weight: 600;
@@ -404,7 +391,45 @@ section {
 .skills .progress-bar {
    width: 1px;
    height: 10px;
-   transition: 3s;
-   background: var(--cor-detalhes)
+   transition: 2s;
+   background: var(--cor-detalhes);
 }
-
+/* Resumo */
+.resume .resume-title {
+   font-size: 30px;
+   font-weight: 700;
+   margin-top: 40px;
+   margin-bottom: 25px;
+}
+.resume .resume-item {
+   padding: 0 0 20px 20px;
+   margin-top: -2px;
+   border-left: 2px solid var(--cor-detalhes);
+   position: relative;
+}
+.resume .resume-item h4 {
+   line-height: 20px;
+   font-size: 20px;
+   font-weight: 600;
+   text-transform: uppercase;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   color: var(--texto-hover);
+   margin-bottom: 10px;
+}
+.resume .resume-item ul {
+   padding-left: 20px;
+}
+.resume .resume-item ul li {
+   padding-bottom: 10px;
+}
+.resume .resume-item::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: -9px;
+   width: 16px;
+   height: 16px;
+   border-radius: 50px;
+   background: var(--texto-claro);
+   border: 2px solid var(--cor-detalhes);
+}
